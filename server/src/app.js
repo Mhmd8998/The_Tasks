@@ -5,7 +5,7 @@ const app = express();
 const task = require("./router/Task");
 //port of server 
 const port = process.env.PORT||5000;
-
+app.use(express.json());
 app.use("/",task);
 //use engin ejs
 app.set("view engin","ejs");
