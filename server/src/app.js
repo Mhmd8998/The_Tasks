@@ -13,7 +13,7 @@ app.use("/", task);
 app.set("view engine", "ejs");
 
 // تحديد مسار مجلد views
-app.set('views', path.join(__dirname, 'src', 'views'));
+app.set('views', path.join(__dirname,'views'));
 
 app.use(express.urlencoded({ extended: true }));
 
