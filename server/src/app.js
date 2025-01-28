@@ -1,3 +1,5 @@
+require("dotenv").config();
+//import libraries
 const express = require("express");
 const app = express();
 //port of server 
