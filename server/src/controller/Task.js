@@ -11,7 +11,7 @@ module.exports={
       return res.status(401).json({message:"title is emptying !"});
     }*/
     const task = await TaskModel.create({
-      title:title
+      title
     })
     return res.redirect("/");
   })
