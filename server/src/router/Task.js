@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { createTask, homeTask ,uptoTask , updateTask} = require("../controller/Task");
+const { createTask, homeTask ,uptoTask , updateTask,deleteTask} = require("../controller/Task");
 
 router.route("/").get(homeTask);
 router.route("/create").post(createTask);
