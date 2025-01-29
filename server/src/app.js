@@ -4,7 +4,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const task = require("./router/Task");
-const methodOverride= require("method-overrode");
+const methodOverride= require("method-override");
 // port of server 
 const port = process.env.PORT || 5000;
 app.use(express.json());
