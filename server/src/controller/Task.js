@@ -25,7 +25,7 @@ module.exports = {
     }),
     deleteTask:asyncHandler(async (req,res)=>{
         const taskid= req.params.id;
-        await TaskModel.findByIdAndDelete(taskid);
+        await TaskModel.deleteOne({_id:taskid});
         return res.redirect("/");
     })
 };
