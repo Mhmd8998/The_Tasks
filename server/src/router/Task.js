@@ -3,7 +3,7 @@ const { createTask, homeTask ,uptoTask , updateTask} = require("../controller/Ta
 
 router.route("/create").post(createTask);
 router.route("/").get(homeTask);
-router.route("/upto").get(uptoTask);
+router.route("/upto/:id").get(uptoTask);
 router.route("/update/:id").put(updateTask);
 
 module.exports = router;
