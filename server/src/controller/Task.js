@@ -3,7 +3,8 @@ const asyncHandler = require("express-async-handler");
 
 module.exports = {
     homeTask: asyncHandler(async (req, res) => {
-        res.render("todo");
+        const tasks = await TaskModel.find();
+        res.render("todo",{tasks});
     }),
     createTask: asyncHandler(async (req, res) => {
         const { title } = req.body;
