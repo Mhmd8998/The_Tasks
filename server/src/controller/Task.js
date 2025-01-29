@@ -16,7 +16,7 @@ module.exports = {
     uptoTask:asyncHandler(async (req,res)=>{
         const tasks = await TaskModel.find();
         const tasksid = req.params.id
-        res.render("todo",{tasks,tasksid});
+        res.render("todoEdit",{tasks,tasksid});
     }),
     updateTask:asyncHandler(async (req,res)=>{
         const tasksid = req.params.id;
