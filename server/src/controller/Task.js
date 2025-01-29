@@ -8,7 +8,7 @@ module.exports = {
     }),
     createTask: asyncHandler(async (req, res) => {
         const { title } = req.body;
-        const task = await TaskModel.create({
+        await TaskModel.create({
             title
         });
         return res.redirect("/");
@@ -20,7 +20,12 @@ module.exports = {
     }),
     updateTask:asyncHandler(async (req,res)=>{
         const tasksid = req.params.id;
-        const tasks = await TaskModel.findByIdAndUpdate(tasksid,{title:req.body.title});
+        await TaskModel.findByIdAndUpdate(tasksid,{title:req.body.title});
+        return res.redirect("/");
+    }),
+    deleteTask:asyncHandler(async (req,res)=>{
+        const taskid= req.params.id;
+        await TaskModel.findByIdAndDelete(taskid);
         return res.redirect("/");
     })
 };
