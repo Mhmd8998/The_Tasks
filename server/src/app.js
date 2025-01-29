@@ -9,7 +9,7 @@ const methodOverride= require("method-override");
 const port = process.env.PORT || 5000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(methodOverride('_method',{method:["POST","PUT"]}))
+app.use(methodOverride('_method'))
 // use engine ejs
 app.set("view engine", "ejs");
 app.set('views', path.join(__dirname, 'views')); // تحديد مسار مجلد views بشكل صحيح
