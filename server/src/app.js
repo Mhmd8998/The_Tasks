@@ -7,15 +7,14 @@ const task = require("./router/Task");
 // port of server 
 const port = process.env.PORT || 5000;
 app.use(express.json());
-app.use("/", task);
+app.use(express.urlencoded({ extended: true }));
 
 // use engine ejs
 app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, 'src', 'views'));
 
-// تحديد مسار مجلد views
-app.set('views', path.join(__dirname,'views'));
-
-app.use(express.urlencoded({ extended: true }));
+// Use task router
+app.use("/", task);
 
 // import mongoose connecting and connecting in db
 const connecting = require("./config/Mongodb");
