@@ -2,7 +2,7 @@
 
 <main class="container">
 <div class="container ">
-<form action="/create" method="post" class="d-flex flex-row m-5">
+<form action="/create" method="post" class="d-flex flex-row mt-5">
   <input type="text" name="title" class="form-control-plaintext border" required>
   <button type="submit" class="btn btn-link">
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
@@ -11,6 +11,13 @@
 </svg>
 </button>
 </form>
+<div class="container m-1">
+       <ul class="list-group">
+               <% tasks.forEach(task => { %>
+                   <li class="list-group-item"><%= task.title %></li>
+               <% }) %>
+           </ul>
+</div>
 </div>
 </main>
 
