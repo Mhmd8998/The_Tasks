@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // use engine ejs
 app.set("view engine", "ejs");
-app.set('views', path.join(__dirname, 'src', 'views'));
+app.set('views', path.join(__dirname, 'views')); // تحديد مسار مجلد views بشكل صحيح
 
 // Use task router
 app.use("/", task);
