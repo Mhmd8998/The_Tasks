@@ -27,7 +27,6 @@ module.exports = {
   }),
   deleteS:asyncHandler(async (req,res)=>{
     await StudentModel.deleteOne({_id:req.params.id});
-    return res
-    redirect("/student/");
+    return res.redirect("/student/");
   })
 }
