@@ -13,5 +13,10 @@ module.exports = {
       age
     });
     return res.redirect("/student");
+  }),
+  upto:asyncHandler(async (req,res)=>{
+    const studentid= req.params.id;
+    const students = await StudentModel.find();
+    
   })
 }
