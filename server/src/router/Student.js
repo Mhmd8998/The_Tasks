@@ -5,6 +5,6 @@ router.route("/").get(getStudent);
 router.route("/create").post(create);
 router.route("/upto/:id").get(upto);
 router.route("/update/:id").put(update);
-router route("/delete/:id").delete(deleteS)
+router.route("/delete/:id").delete(deleteS)
 
 module.exports= router;
