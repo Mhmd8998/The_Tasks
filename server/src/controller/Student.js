@@ -8,7 +8,7 @@ module.exports = {
   }),
   create:asyncHandler(async (req,res)=>{
     const {name,age}= req.body;
-    const student = await StudentModel.create({
+    await StudentModel.create({
       name,
       age
     });
