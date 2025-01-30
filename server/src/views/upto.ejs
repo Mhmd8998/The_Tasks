@@ -15,7 +15,7 @@
         
         <div class="container mt-4">
             <ul class="list-group">
-                <% students.forEach(task => { %>
+                <% students.forEach(student => { %>
                     <% if (student._id == studentid) { %>
                         <form action="/student/update/<%= student._id %>?_method=PUT" method="post" class="d-flex flex-row mt-3">
                             <input type="text" name="name" class="form-control me-2" value="<%= student.name %>" required>
