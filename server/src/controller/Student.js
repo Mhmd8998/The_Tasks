@@ -4,7 +4,7 @@ const asyncHandler = require("express-async-handler");
 module.exports = {
   getStudent:asyncHandler(async (req,res)=>{
     const students = await StudentModel.find();
-    //return render({students});
+    return render("student",{students});
   }),
   create:asyncHandler(async (req,res)=>{
     const {name,age}= req.body;
