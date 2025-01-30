@@ -4,6 +4,7 @@ const express = require("express");
 const path = require("path");
 const app = express();
 const task = require("./router/Task");
+const student = require("./router/Student");
 const methodOverride= require("method-override");
 // port of server 
 const port = process.env.PORT || 5000;
@@ -16,6 +17,7 @@ app.set('views', path.join(__dirname, 'views')); // تحديد مسار مجلد
 
 // Use task router
 app.use("/", task);
+app.use("/student", student);
 
 // import mongoose connecting and connecting in db
 const connecting = require("./config/Mongodb");
