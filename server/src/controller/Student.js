@@ -22,7 +22,7 @@ module.exports = {
   update:asyncHandler(async (req,res)=>{
     const studentid= req.params.id;
     const {name,age} = req.body
-    await StudentModel.updateOne(studentid,{name,age});
+    await StudentModel.updateOne({_id:studentid},{name,age});
     res.redirect("/student");
     
   })
