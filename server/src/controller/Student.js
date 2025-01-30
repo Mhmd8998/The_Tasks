@@ -12,6 +12,6 @@ module.exports = {
       name,
       age
     });
-    return res.redirect("/");
+    return res.redirect("/student");
   })
 }
